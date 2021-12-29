@@ -10,7 +10,6 @@ import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
-@RunWith(MockitoJUnitRunner.class)
 public class StringUtilControllerTest {
 
 	@Test
@@ -37,7 +36,7 @@ public class StringUtilControllerTest {
 	}
 
 	@Test
-	public void whenCreateMock_thenCreated() {
+	public void mockTest() {
 		List mockedList = Mockito.mock(ArrayList.class);
 		mockedList.add("one");
 		Mockito.verify(mockedList).add("one");
@@ -46,7 +45,7 @@ public class StringUtilControllerTest {
 	}
 
 	@Test
-	public void whenCreateSpy_thenCreate() {
+	public void spyTest() {
 		List spyList = Mockito.spy(ArrayList.class);
 		spyList.add("one");
 		Mockito.verify(spyList).add("one");
