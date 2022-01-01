@@ -6,16 +6,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.Mockito;
-import org.mockito.junit.MockitoJUnitRunner;
 
 public class StringUtilControllerTest {
 
 	@Test
 	public void testReverseString() {
-		String reversed = StringUtilController.reverseString("test");
-		assertEquals("tset", reversed);
+		String reversed = StringUtilController.reverseString("test data");
+		assertEquals("atad tset", reversed);
+	}
+	
+	@Test
+	public void testReverseString1() {
+		String reversed = StringUtilController.reverseString(" e");
+		assertEquals("e ", reversed);
 	}
 
 	@Test
@@ -28,7 +32,8 @@ public class StringUtilControllerTest {
 		assertEquals(100, spyList.size());
 
 		assertEquals(0, mockList.size());
-		Mockito.doReturn(10).when(mockList).size();
+		System.out.println(mockList.size());
+		Mockito.doReturn(10).when(mockList).size(); // mocking list.size() => 10
 		assertEquals(10, mockList.size());
 
 		System.out.println(spyList.size());
@@ -50,6 +55,7 @@ public class StringUtilControllerTest {
 		spyList.add("one");
 		Mockito.verify(spyList).add("one");
 		assertEquals(1, spyList.size());
+		System.out.println(spyList);
 		System.out.println(spyList.size());
 	}
 }
