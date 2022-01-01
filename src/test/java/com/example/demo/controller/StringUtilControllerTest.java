@@ -55,7 +55,6 @@ public class StringUtilControllerTest {
 		spyList.add("one");
 		Mockito.verify(spyList).add("one");
 		assertEquals(1, spyList.size());
-		System.out.println(spyList);
 		System.out.println(spyList.size());
 	}
 }
