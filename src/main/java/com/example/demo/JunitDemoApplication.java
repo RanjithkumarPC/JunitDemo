@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class JunitDemoApplication {
 
 	public static void main(String[] args) {
+		System.out.println("wqasad");
 		SpringApplication.run(JunitDemoApplication.class, args);
 	}
 
