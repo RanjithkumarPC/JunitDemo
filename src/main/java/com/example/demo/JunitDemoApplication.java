@@ -8,7 +8,7 @@ public class JunitDemoApplication {
 
 	public static void main(String[] args) {
 		System.out.println("wqasad");
-		System.out.println("asasa");
+		System.out.println("12122");
 		SpringApplication.run(JunitDemoApplication.class, args);
 	}
 
